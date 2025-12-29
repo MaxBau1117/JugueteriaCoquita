@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juguetería Coquita - ¡Pequeños tesoros para grandes aventuras!</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+
+            <h1 class="logo">Juguetería Coquita</h1>
+            
+            <h3 class="slogan">✨Pequeños tesoros para grandes aventuras✨</h3>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#sobre">Sobre Nosotros</a></li>
+                    <li><a href="products.html">Productos</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+
+                <div class="auth-buttons">
+                    <a href="registro.html" class="btn-login">
+                        <span>👤</span> Registrarse / Iniciar sesión
+                    </a>
+                </div>
+
+
+
+            </nav>
+        </div>
+    </header>
+    <section id="inicio" class="hero">
+        <div>        
+            <br>
+            <br>
+            <br>
+            <marquee scrollamount="15"><h1>¡Bienvenidos a Juguetería Coquita!</h1></marquee>
+        </div>
+    </section>
+    <!-- NUEVA SECCIÓN DE PRODUCTOS DESTACADOS -->
+    <section id="destacados" class="featured">
+        <div class="container">
+            <h2>Productos Destacados</h2>
+            <div class="grid">
+                <div class="product-card">
+                    <img src="spidy2.png.jpeg" alt="Spider-Man Titan Hero">
+                    <h3>Spider-Man Titan Hero</h3>
+                    <p>Figura articulada de tu héroe favorito.</p>
+                </div>
+                <div class="product-card">
+                    <img src="babrie.png.jpeg" alt="Barbie Fashion Star">
+                    <h3>Barbie Fashion Star</h3>
+                    <p>La muñeca más glamorosa y moderna.</p>
+                </div>
+                <div class="product-card">
+                    <img src="stitch.png.jpeg" alt="Stitch Peluche">
+                    <h3>Stitch Peluche</h3>
+                    <p>El tierno extraterrestre en versión abrazable.</p>
+                </div>
+            </div>
+            <a href="products.html" class="cta-button">Ver Más Productos</a>
+        </div>
+    </section>
+    <!-- FIN DE NUEVA SECCIÓN -->
+
+    <section id="sobre" class="about">
+        <div class="container">
+            <h2><q>¿Quiénes somos?</q></h2>
+            <p>Somos una juguetería familiar apasionada por llevar alegría a los más pequeños. Con años de experiencia, seleccionamos los mejores juguetes educativos y divertidos, desde peluches hasta juegos de mesa. ¡Ven y crea recuerdos inolvidables!</p>
+        </div>
+    </section>
+    <!-- ===== REDES SOCIALES ===== -->
+<section class="social-section">
+    <div class="container">
+        <h2>Síguenos en nuestras redes</h2>
+
+        <div class="social-icons">
+            <a href="https://www.instagram.com/juguetes.coquita_/" class="social instagram">📸 Instagram</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CONTADOR DE VISITAS ===== -->
+<section class="visits-section">
+    <div class="container">
+        <h2>👀 Visitantes</h2>
+        <p class="visit-count">
+            Esta página ha sido visitada <span id="contador">0</span> veces
+        </p>
+    </div>
+</section>
+
+<script>
+    let visitas = localStorage.getItem("visitas");
+
+    if (!visitas) {
+        visitas = 1;
+    } else {
+        visitas = parseInt(visitas) + 1;
+    }
+
+    localStorage.setItem("visitas", visitas);
+    document.getElementById("contador").textContent = visitas;
+</script>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Juguetería Coquita. Todos los derechos reservados.</p>
+            <p><a href="aviso.html">Visita nuestro Aviso de privacidad</a></p>
+        </div>
+    </footer>
+</body>
+</html>
